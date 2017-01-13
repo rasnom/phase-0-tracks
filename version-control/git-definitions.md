@@ -10,3 +10,4 @@
  * A commit is an update of a branch with new changes. A good commit message should be concise but fully explain the changes. Apparently it should also be in the present tense.
 * What is a merge conflict?
  * When multible branches are being worked on simultaneously, some will get merged back into master before other. A merge conflict is when changes that have already been merged cause the changes that you are currently trying to merge make no sense. The classic example seems to be an attempt to modify a line of code that has been fully deleted.
+

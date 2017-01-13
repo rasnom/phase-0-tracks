@@ -1,13 +1,13 @@
 # Git Definitions
 
-**Instructions: ** Define each of the following Git concepts.
+**Instructions:** Define each of the following Git concepts.
 
-* What is version control?  Why is it useful? Version control allows you to create branches within a master file to keep track of changes in a program. You can access past versions and go back to previous save points. It is a way of organizing a program using different versions that are reviewed and then merged into the main program. It is useful because it allows you to track errors in the code and access a previous version with no errors until the errors have been fixed. 
+* What is version control?  Why is it useful?
+ * Version control is a way of managing changes, both over time and by multiple contributers to a piece of work. It is useful because it allows peole to work on something without endangering the past work up to this point.
+* What is a branch and why would you use one?
+ * A branch is a copy of the codebase that is intended for modifying and experimenting with.
+* What is a commit? What makes a good commit message?
+ * A commit is an update of a branch with new changes. A good commit message should be concise but fully explain the changes. Apparently it should also be in the present tense.
+* What is a merge conflict?
+ * When multible branches are being worked on simultaneously, some will get merged back into master before other. A merge conflict is when changes that have already been merged cause the changes that you are currently trying to merge make no sense. The classic example seems to be an attempt to modify a line of code that has been fully deleted.
 
-* What is a branch and why would you use one? a branch is a way to create a change outside of the main branch or program. Once a branch is reviewed, it can be merged into the main program branch.
-
-
-* What is a commit? What makes a good commit message? A commit is a save point. A good commit message should explain all changes that were made and give a clear description to others on the project.
-
-
-* What is a merge conflict? A merge conflict is when there is a problem when you attempt to merge a branch into another branch. I haven't run into one yet, but from research my understanding is that it usually occurs when you have commits in one branch, that are not in the other branch and so you have to reconcile that before the merge can occur. 

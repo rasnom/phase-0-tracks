@@ -47,16 +47,19 @@ figcaption {
   text-align: right;
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    background-color: hotpink;
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 90%;
   }
  }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
   #external-links ul {
     position: relative;
     display: inline;
+  }
+  main {
+    margin-left: 5%;
   }
 }
 

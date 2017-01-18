@@ -10,6 +10,8 @@ body {
 
 main {
   width: 756px;
+  display:inline-block;
+  margin-left: 200px;
 }
 
 cite {
@@ -19,8 +21,11 @@ cite {
 
 #external-links ul {
   width: 200px;
+  display: inline-block;
+  vertical-align: top;
   list-style-type: none;
   padding-left: 0px;
+  position: absolute;
 }
 
 /* you're welcome to edit the

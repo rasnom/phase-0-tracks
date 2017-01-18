@@ -5,13 +5,14 @@ blockquote {
 }
 
 body {
-  width: 960px;
+  max-width: 960px;
 }
 
 main {
-  width: 756px;
+  width: 50%;
   display:inline-block;
-  margin-left: 200px;
+  margin-left: 25%;
+  min-width: 50px;
 }
 
 cite {
@@ -20,7 +21,9 @@ cite {
 }
 
 #external-links ul {
-  width: 200px;
+  width: 25%;
+  min-width: 20px;
+
   display: inline-block;
   vertical-align: top;
   list-style-type: none;
@@ -44,3 +47,16 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+  figcaption {
+    color: green;
+  }
+}
+
+

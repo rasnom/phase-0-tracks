@@ -4,12 +4,21 @@ blockquote {
   margin-left: 0px;
 }
 
+body {
+  width: 960px;
+}
+
+main {
+  width: 756px;
+}
+
 cite {
   display: block;
   margin-top: 10px;
 }
 
 #external-links ul {
+  width: 200px;
   list-style-type: none;
   padding-left: 0px;
 }

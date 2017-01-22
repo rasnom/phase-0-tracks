@@ -16,6 +16,8 @@ img {
 
 #hat {
 	z-index: 3;
+	top: -50px;
+	left: 20px;
 }
 
 #glasses {

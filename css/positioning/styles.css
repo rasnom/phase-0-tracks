@@ -1,0 +1,27 @@
+img {
+	display: block;
+	position: absolute;
+	
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+}
+
+#octopus {
+	z-index: 1;
+}
+
+#hat {
+	z-index: 3;
+	top: -50px;
+	left: 20px;
+}
+
+#glasses {
+	z-index: 2;
+	top: 105px;
+	left: 10px;
+}

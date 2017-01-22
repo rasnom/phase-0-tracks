@@ -22,4 +22,6 @@ img {
 
 #glasses {
 	z-index: 2;
+	top: 105px;
+	left: 10px;
 }

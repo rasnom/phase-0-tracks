@@ -1,0 +1,26 @@
+header {
+  background-color: red;
+  background-image: url("http://www.placecage.com/960/100");
+}
+
+body {
+  background-color: orange;
+}
+
+footer {
+  background-color: yellow;
+  font-family: sans-serif;
+}
+
+.column-1, .column-2{
+  outline: solid 1px purple;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  margin: 10px;
+}
+
+.column-1:hover, .column-2:hover {
+  background-color: hotpink;
+}

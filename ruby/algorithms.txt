@@ -1,0 +1,53 @@
+Robot Elevator Algorithm
+
+- determine current floor
+- determine desired floor
+- if current floor < desired floor
+	- push up call button
+- elseif current floor > desired floor
+	- push down call button
+- else 
+		- great, you are already there
+
+- wait until elevator door opens
+- enter elevator
+- press button for desired floor
+
+- wait until elevator reaches desired floor and door opens or 10 minutes have passed
+- if at desired floor
+	- exit elevator
+- else 
+	- call for help
+
+
+
+	Salad Dressing Algorithm
+
+	- determine minimum volume of salad dressing needed, V
+	- locatate sealable container at least 2V in size
+
+	- add 1/3 V oil
+	- add 2/3 V vinegar or mix of vinegars
+	- add 2 pinch salt, 1 pinch pepper, 1 spoonful sugar, 1 squirt mustard
+
+	- seal container and shake
+	- open container and taste
+
+	- while it doesn't taste quite right
+		- remember the previous taste
+		if too salty or too sweet 
+			- add splash vinegar
+		if not salty enough
+			- add pinch salt
+		if not sweet enough
+			- add pepper
+		if balanced but boring
+			- add splash something random from the fridge
+		- taste
+		- if taste is not better than before adjusting
+			- that's as good as it is going to get, break
+
+	- if taste still not good enough
+		- start over or go buy some dressing
+	else 
+	  - eat salad

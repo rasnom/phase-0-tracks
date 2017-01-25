@@ -18,6 +18,16 @@ def questionnaire
 	puts "Would you like to enroll in the company's health insurance?"
 	file['enroll'] = gets.chomp.downcase.include?("yes")
 
+	puts "Please list each of your allergies (type \"done\" when finised)."
+	
+	file['sunshine_allergy'] = false
+	begin
+		allergy = gets.chomp.downcase
+		if allergy == "sunshine" 
+			file['sunshine_allergy'] = true
+		end
+	end until allergy == "done"
+
 	return file
 end
 
@@ -25,8 +35,8 @@ end
 def age_right?(age,birth_year)
 	current_year = Date.today.year
 
-	return birth_year + age == current_year || 
-					birth_year + age == current_year - 1
+	return (birth_year + age == current_year || 
+					birth_year + age == current_year - 1)
 end
 
 
@@ -34,7 +44,9 @@ def evaluate_candidate(file)
 	knows_age = age_right?(file['age'],file['birth_year'])
 	
 	result = "Results inconclusive"
-	if file['name'] == "Drake Cula" || file['name'] == "Tu Fang"
+	if file['sunshine_allergy']
+		result = "Possibly a vampire"
+	elsif file['name'] == "Drake Cula" || file['name'] == "Tu Fang"
 		result = "Definitely a vampire"
 	elsif knows_age
 		if file['order_bread'] || filel['enroll']
@@ -51,7 +63,7 @@ end
 puts "How many employees will be processed?"
 num_candidates = gets.chomp.to_i
 
-pool = []
+pool = []#
 
 for index in 0...num_candidates
 	file = questionnaire
@@ -59,6 +71,5 @@ for index in 0...num_candidates
 end
 
 
-
-puts pool[0[0]]
-puts pool[1[0]]
+puts pool[0,1]
+puts pool[1,1]

@@ -1,4 +1,3 @@
-
 require 'date'
 
 def questionnaire
@@ -49,9 +48,17 @@ def evaluate_candidate(file)
 end		
 	
 
+puts "How many employees will be processed?"
+num_candidates = gets.chomp.to_i
 
-f = questionnaire
+pool = []
 
-puts age_right?(f['age'],f['birth_year'])
+for index in 0...num_candidates
+	file = questionnaire
+	pool[index] = [file,evaluate_candidate(file)]
+end
 
-puts evaluate_candidate(f)
+
+
+puts pool[0[0]]
+puts pool[1[0]]

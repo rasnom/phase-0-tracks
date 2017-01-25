@@ -7,10 +7,10 @@ def questionnaire
 	file['name'] = gets.chomp
 
 	puts "How old are you?"
-	file['age'] = gets.chomp
+	file['age'] = gets.chomp.to_i
 
 	puts "What year were you born?"
-	file['birth_year'] = gets.chomp
+	file['birth_year'] = gets.chomp.to_i
 
 	puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 	file['order_bread'] = gets.chomp.downcase.include?("yes")
@@ -42,7 +42,6 @@ end
 
 def evaluate_candidate(file)
 	knows_age = age_right?(file['age'],file['birth_year'])
-	puts knows_age
 
 	result = "Results inconclusive"
 	if file['sunshine_allergy']
@@ -71,5 +70,6 @@ for index in 0...num_candidates
 	puts pool[index][1] + "\n\n"
 end
 
+puts "\n"
 puts "Actually, never mind. What do these questions have to do with anything?"
 puts "Let's all be friends."

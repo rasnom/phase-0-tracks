@@ -12,9 +12,9 @@ decrypt (the_string)
 
 	subtract 1 from result of each letter
 
-	return the letters that coincide with that index
 =end
 
+=begin
 def encrypt (the_string)
 	encrypted = ""
 	for index in (0...the_string.length)
@@ -27,12 +27,61 @@ def encrypt (the_string)
 	return encrypted
 end
 
+new_string = ""
+index = 0
+until index >= the_string.length
+	new_string = new_string + the_string[index].next
+	index = index + 1
+end	
 
 def encrypt_char (letter)
   letter.next
+end	
+
+=end	
+
+def encrypt (the_string)
+	encrypted = ""
+	index = 0
+	until index == the_string.length
+		if the_string[index] == " "
+			encrypted = encrypted + " "
+		else
+			encrypted = encrypted + the_string[index].next
+		end
+		index += 1
+	end
+	return encrypted
 end
+
+def previous (char)
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+    new_index = alphabet.index(char) - 1
+    return alphabet[new_index]
+end
+
+
+def decrypt (the_string)
+	decrypted = ""
+	index = 0
+	until index == the_string.length
+		if the_string[index] == " "
+			decrypted = decrypted + " "
+		else
+			decrypted = decrypted + previous(the_string[index])
+		end
+		index += 1
+	end
+	return decrypted
+end
+
+
+
 
 puts encrypt ("elephant rhino")
 
+puts previous ("j")
+
+puts decrypt (encrypt("mitsubishi honda"))
 
 

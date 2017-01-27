@@ -77,7 +77,7 @@ def decrypt (the_string)
 	return decrypted
 end
 
-
+=begin
 puts encrypt("abc")
 puts encrypt("zed")
 puts decrypt("bcd")
@@ -89,5 +89,19 @@ puts encrypt ("elephant rhino")
 # character, and then once that is returned you decrypte and undo
 # that process by moving the character backwards
 puts decrypt (encrypt("mitsubishi honda"))
+		
+=end 
 
-
+puts "Would you like to encrypt or decrypt a password?"
+process = gets.chomp
+if process == "encrypt"
+	puts "Enter password"
+	password = gets.chomp
+	puts encrypt(password)
+elsif process == "decrypt"
+	puts "Enter password"
+	password = gets.chomp
+	puts decrypt(password)
+else
+	puts "please pick encrypt or decrypt"
+end

@@ -16,9 +16,23 @@ decrypt (the_string)
 =end
 
 def encrypt (the_string)
+	encrypted = ""
 	for index in (0...the_string.length)
-		puts the_string[index] 
+		if the_string[index] == " "	
+			encrypted += the_string[index]
+		else
+			encrypted += encrypt_char(the_string[index])
+		end
 	end
+	return encrypted
 end
-encrypt ("elephant")
+
+
+def encrypt_char (letter)
+  letter.next
+end
+
+puts encrypt ("elephant rhino")
+
+
 

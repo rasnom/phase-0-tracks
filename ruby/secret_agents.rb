@@ -46,7 +46,9 @@ def encrypt (the_string)
 	until index == the_string.length
 		if the_string[index] == " "
 			encrypted = encrypted + " "
-		else
+		elsif the_string[index] == "z"
+			encrypted = encrypted + "a"
+		else	
 			encrypted = encrypted + the_string[index].next
 		end
 		index += 1
@@ -76,12 +78,16 @@ def decrypt (the_string)
 end
 
 
-
+puts encrypt("abc")
+puts encrypt("zed")
+puts decrypt("bcd")
+puts decrypt("afe")
 
 puts encrypt ("elephant rhino")
-
-puts previous ("j")
-
+	
+# when you encrypte "mitsubishi honda" you move the letter forward for each 
+# character, and then once that is returned you decrypte and undo
+# that process by moving the character backwards
 puts decrypt (encrypt("mitsubishi honda"))
 
 

@@ -25,7 +25,7 @@ if age != nil
 else
 	puts "you have an ageless hamster!"
 end
-
+		
 
 
 

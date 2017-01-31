@@ -37,12 +37,27 @@ end
 # 	return updated (or not) hash
 # end
 
+def ask_for_update(client)
+	puts "Select a field to update (or none)."
+	puts client.keys
+	return client
+end
+
 # driver code
+# 
+# get_client_info
+# puts client_info
+# update_client_info
+# puts client_info
 
 client_info = get_client_info
-puts client_info
-# ask_for_update
-# puts client
+puts "\n\nClient Info : "
+puts client_info 
+puts "\n\n"
+updated_info = ask_for_update(client_info)
+puts "\n\nUpdated Client Info : "
+pupts updated_info 
+
 
 
 

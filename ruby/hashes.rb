@@ -40,6 +40,14 @@ end
 def ask_for_update(client)
 	puts "Select a field to update (or none)."
 	puts client.keys
+	choice = gets.chomp.to_sym
+	if client.keys.include?(choice)
+		if client[choice].is_a? Integer
+			client[choice] = gets.chomp.to_i
+		else
+			client[choice] = gets.chomp
+		end
+	end
 	return client
 end
 
@@ -56,7 +64,7 @@ puts client_info
 puts "\n\n"
 updated_info = ask_for_update(client_info)
 puts "\n\nUpdated Client Info : "
-pupts updated_info 
+puts updated_info 
 
 
 

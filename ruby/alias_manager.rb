@@ -37,9 +37,14 @@ end
 
 #puts fake_name "Felicia Torres"
 
+monikers = {}
 name = ""
+
 until name == 'quit'
 	puts "Enter a name (or 'quit')"
 	name = gets.chomp
 	puts "becomes: #{fake_name(name)} \n\n"
+	monikers[name] = fake_name(name)
 end
+
+puts monikers

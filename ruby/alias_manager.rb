@@ -35,4 +35,11 @@ def fake_name(real_name)
 	moniker.split('').map{|char| increment_vowels(char)}.join('')
 end
 
-puts fake_name "Felicia Torres"
+#puts fake_name "Felicia Torres"
+
+name = ""
+until name == 'quit'
+	puts "Enter a name (or 'quit')"
+	name = gets.chomp
+	puts name
+end

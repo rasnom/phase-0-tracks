@@ -1,5 +1,38 @@
-# def fakename
-# 	ask for name
+# def fakename(name)
 # 	moniker = name.swap_first_and_last
 # 	moniker.increment_vowels!
 # end
+
+def increment_vowels(char)
+	case char
+	when "A" 
+		return "E"
+	when "E" 
+		return "I"
+	when "I" 
+		return "O"
+	when "O" 
+		return "U"
+	when "U" 
+		return "A"
+	when "a" 
+		return "e"
+	when "e" 
+		return "i"
+	when "i" 
+		return "o"
+	when "o" 
+		return "u"
+	when "u" 
+		return "e"
+	else 
+		return char
+	end
+end
+
+def fake_name(real_name)
+	moniker = real_name.split(' ').reverse.join(' ')
+	moniker.split('').map{|char| increment_vowels(char)}.join('')
+end
+
+puts fake_name "Felicia Torres"

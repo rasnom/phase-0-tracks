@@ -41,5 +41,5 @@ name = ""
 until name == 'quit'
 	puts "Enter a name (or 'quit')"
 	name = gets.chomp
-	puts name
+	puts "becomes: #{fake_name(name)} \n\n"
 end

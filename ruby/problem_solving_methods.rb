@@ -16,7 +16,7 @@ def search_array(array, integer)
 end
 
 
-p search_array(array,3)
+p search_array(arr,3)
 
 
 

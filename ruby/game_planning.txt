@@ -1,0 +1,8 @@
+pseudo coding a plan for a word game
+
+class WordGame
+	
+	
+
+	
+end

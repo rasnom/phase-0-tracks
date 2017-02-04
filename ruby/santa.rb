@@ -1,6 +1,6 @@
 class Santa
-	attr_reader :age, :ethnicity
-	attr_accessor :gender
+	attr_reader :ethnicity
+	attr_accessor :age, :gender
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
@@ -46,11 +46,28 @@ end
 # santas.each {|santa| santa.about}
 
 
-leo = Santa.new("hearty","Newfoundlander")
-p leo
-9.times {leo.celebrate_birthday}
-puts "age : #{leo.age}"
-puts "ethnicity : #{leo.ethnicity}"
-leo.gender = "thruster"
-leo.get_mad_at("Comet")
-p leo
+# leo = Santa.new("hearty","Newfoundlander")
+# p leo
+# 9.times {leo.celebrate_birthday}
+# puts "age : #{leo.age}"
+# puts "ethnicity : #{leo.ethnicity}"
+# leo.gender = "thruster"
+# leo.get_mad_at("Comet")
+# p leo
+
+
+some_genders = ["forward", "backward", "innie", "outie", "pleaser", "cat",
+								"agender", "female", "bigender", "male", "female", 
+								"gender fluid", "N/A"]
+some_ethnicities = ["new englander", "beige", "mutt", "roma", "aristocracy",
+										"black", "Latino", "white", "Japanese-African", 
+										"prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+114.times do
+	this_santa = Santa.new(some_genders.sample, some_ethnicities.sample)
+	this_santa.age = rand(141)
+	puts "age : #{this_santa.age}"
+	puts "gender : #{this_santa.gender}"
+	puts "ethnicity : #{this_santa.ethnicity}"
+	puts "\n"
+end

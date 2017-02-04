@@ -30,7 +30,20 @@ class Santa
 		@reindeer_ranking << reindeer
 	end
 
-	
+	def gender=(label)
+		@gender = label
+	end
+
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+
+
+
 
 end
 
@@ -38,10 +51,19 @@ end
 # s.speak
 # s.eat_milk_and_cookies("brownie")
 
-santas = []
-some_genders = ["forward", "backward", "innie", "outie", "pleaser", "cat"]
-some_ethnicities = ["new englander", "beige", "mutt", "roma", "aristocracy"]
 
-6.times {santas << Santa.new(some_genders.sample, some_ethnicities.sample)}
+# santas = []
+# some_genders = ["forward", "backward", "innie", "outie", "pleaser", "cat"]
+# some_ethnicities = ["new englander", "beige", "mutt", "roma", "aristocracy"]
+# 6.times {santas << Santa.new(some_genders.sample, some_ethnicities.sample)}
+# santas.each {|santa| santa.about}
 
-santas.each {|santa| santa.about}
+
+leo = Santa.new("hearty","Newfoundlander")
+p leo
+9.times {leo.celebrate_birthday}
+puts "age : #{leo.age}"
+puts "ethnicity : #{leo.ethnicity}"
+leo.gender = "thruster"
+leo.get_mad_at("Comet")
+p leo

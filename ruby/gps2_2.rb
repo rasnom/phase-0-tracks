@@ -1,3 +1,6 @@
+#########################################################
+# Pseudocode
+
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -38,6 +41,9 @@
     # print string to screen
 # output: (implicit nil)
 
+
+#########################################################
+# Methods
 
 def create_list(items_string)
 	default_quantity = 1
@@ -108,3 +114,39 @@ delete_item(new_list, "lemonade")
 update_list(new_list, "ice cream", 1)
 
 print_list(new_list)
+
+
+#########################################################
+# Reflection
+
+# What did you learn about pseudocode from working on this challenge?
+	# We were asked to use some pretty specific style requirements for 
+	# our pseudocode in this challenge, and I had always though of
+	# pseudocode as being whatever works to help you think through 
+	# a problem.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+	# Hash's are a little more complicated, but if you used Arrays then
+	# you would need to either effectively simulate a Hash by having 
+	# each element of the Array be another Array with the item name and
+	# quantity, or have two different Arrays and make sure that they 
+	# were both updated in sync.	
+
+# What does a method return?
+	# The return value of the last line of code that is executed
+	# in the method.
+
+# What kind of things can you pass into methods as arguments?
+	# Objects. So I think that is basically anything other than
+	# reserved words and code blocks (one of which can be 
+	# passed separately)
+
+# How can you pass information between methods?
+	# One method can pass info to another by calling it and including
+	# the info as an argument, the other method can pass info back
+	# in it's return.
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+	# Setting up default values for Hash's was solidified. 
+	# During the research portion of the challenge we ran across the 
+	# concept of a method's "arity" which is still pretty unclear.

@@ -40,18 +40,24 @@
 
 
 def create_list(items_string)
-	grocery_list = {}
-	items_array = items_string.split(" ")
 	default_quantity = 1
+
+	grocery_list = Hash.new{|hash, key| hash[key] = default_quantity}
+	items_array = items_string.split(" ")
+	
 	items_array.each do |item| 
-		grocery_list[item.to_sym] = default_quantity
+		grocery_list[item.to_sym]
 	end
 	print_list(grocery_list)
 	grocery_list
 end
 
-def add_item(list, item, quantity = 1)
-	list[item.to_sym] = quantity
+def add_item(list, item, quantity="not specified")
+	if quantity == "not specified"
+		list[item.to_sym]
+	else
+		list[item.to_sym] = quantity
+	end
 	list
 end
 
@@ -94,7 +100,7 @@ print_list(new_list)
 
 add_item(new_list, "lemonade", 2)
 add_item(new_list, "tomatoes", 3)
-add_item(new_list, "onion", 1)
+add_item(new_list, "onion")
 add_item(new_list, "ice cream", 4)
 
 delete_item(new_list, "lemonade")

@@ -37,3 +37,54 @@
     # convert each items/quantity to a string
     # print string to screen
 # output: (implicit nil)
+
+
+def create_list(items_string)
+	grocery_list = {}
+	items_array = items_string.split(" ")
+	default_quantity = 1
+	items_array.each do |item| 
+		grocery_list[item.to_sym] = default_quantity
+	end
+	print_list(grocery_list)
+	grocery_list
+end
+
+def add_item(list, item, quantity = 1)
+	list[item.to_sym] = quantity
+	list
+end
+
+def delete_item(list, item)
+	list.delete(item.to_sym)
+	list
+end
+
+def update_list(list, item, quantity)
+	if list.include?(item.to_sym)
+		list[item.to_sym] = quantity
+	end
+	list
+end
+
+def print_list(list)
+	puts "**************************************************"
+	puts "Grocery List:"
+	list.each do |item,quantity|
+		puts "#{item.to_s.capitalize}  -  #{quantity}"
+	end
+	puts "**************************************************"
+end
+
+#########################################################
+# Driver Code
+
+grocery_list = create_list("soup greens chocolate")
+add_item(grocery_list, "corn")
+add_item(grocery_list, "popcorn", 3)
+p grocery_list
+delete_item(grocery_list,"soup")
+p grocery_list
+update_list(grocery_list,"greens",5)
+update_list(grocery_list,"flour",4)
+print_list(grocery_list)

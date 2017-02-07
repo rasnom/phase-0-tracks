@@ -79,12 +79,26 @@ end
 #########################################################
 # Driver Code
 
-grocery_list = create_list("soup greens chocolate")
-add_item(grocery_list, "corn")
-add_item(grocery_list, "popcorn", 3)
-p grocery_list
-delete_item(grocery_list,"soup")
-p grocery_list
-update_list(grocery_list,"greens",5)
-update_list(grocery_list,"flour",4)
-print_list(grocery_list)
+# grocery_list = create_list("soup greens chocolate")
+# add_item(grocery_list, "corn")
+# add_item(grocery_list, "popcorn", 3)
+# p grocery_list
+# delete_item(grocery_list,"soup")
+# p grocery_list
+# update_list(grocery_list,"greens",5)
+# update_list(grocery_list,"flour",4)
+# print_list(grocery_list)
+
+new_list = create_list("")
+print_list(new_list)
+
+add_item(new_list, "lemonade", 2)
+add_item(new_list, "tomatoes", 3)
+add_item(new_list, "onion", 1)
+add_item(new_list, "ice cream", 4)
+
+delete_item(new_list, "lemonade")
+
+update_list(new_list, "ice cream", 1)
+
+print_list(new_list)

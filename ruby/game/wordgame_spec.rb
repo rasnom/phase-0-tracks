@@ -49,5 +49,44 @@ describe WordGame do
 		wordgame.guess?("z")
 		expect(wordgame.progress).to eq "P_P__A__"
 	end
+
+	it "keep guessing while guesses left and progress not done" do
+		wordgame.new_round("triage")
+		("a".."e").each {|letter| wordgame.guess?(letter)}
+		expect(wordgame.keep_playing?).to eq true
+	end
+
+	it "end game if word guessed" do
+		wordgame.new_round("triage")
+		"asdtriage".split("").each {|letter| wordgame.guess?(letter)}
+		expect(wordgame.keep_playing?).to eq false
+	end
+
+	it "end game if out of guesses" do
+		wordgame.new_round("triage")
+		("a".."s").each {|letter| wordgame.guess?(letter)}
+		expect(wordgame.keep_playing?).to eq false
+	end
+
+	it "taunt if loss" do
+		wordgame.new_round("triage")
+		letter = "a"
+		while wordgame.keep_playing? do
+			wordgame.guess?(letter)
+			letter = letter.next
+		end
+		expect(wordgame.message.downcase).to include("suck")
+	end
+
+	it "congratulate if win" do
+		wordgame.new_round("triage")		
+		guess_order = "easrtignoupy"
+		guess_index = 0
+		while wordgame.keep_playing? do
+			wordgame.guess?(guess_order[guess_index])
+			guess_index += 1
+		end
+		expect(wordgame.message.downcase).to include("win")
+	end
 	
 end

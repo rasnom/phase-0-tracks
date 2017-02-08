@@ -21,6 +21,13 @@ class WordGame
 			@letters_guessed << letter
 		end
 		update_progress(letter)
+		
+		if @progress == @secret_word
+			@game_state = :win
+		elsif @guesses_left < 1
+			@game_state = :loss
+		end
+
 		@secret_word.include?(letter)
 	end
 
@@ -31,6 +38,23 @@ class WordGame
 			end
 		end	
 		@progress
+	end
+
+	def keep_playing?
+		@game_state != :win && @game_state != :loss
+	end
+
+	def message
+		case @game_state 
+		when :loss
+			return "You lose. Too bad you suck at this game"
+		when :win
+			return "Congratulations, you win!"
+		when :playing
+			return "The game is afoot. Guess a letter"
+		else
+			return "Create a new game to play."
+		end
 	end
 
 end

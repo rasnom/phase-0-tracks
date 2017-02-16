@@ -95,25 +95,30 @@ end
 
 # REVIEW AND REFLECT
 # What are the differences between the two different hash syntaxes shown in the state_data file?
-#   a. the one with the => (the outside hash) uses a string as the key; 
-#   the one with the : (the inside hash) uses a symbol as a key.
-#   b. therefore, the access the outside hash, we use a string (i.e. STATE_DATA['Alabama']); to access the 
-#   inside hash, we use a symbol (i.e. STATE_DATA['Alabama'][:population_density])
-# What does require_relative do? How is it different from require? 
-#   require_relative allows the code in the given section to reference code that is located in another file; 
-#   the "relative" part tells the code to start looking for the other code in the current directory,
-#   the directory that contains this code
-# What are some ways to iterate through a hash?
-#   a. you can use .each do |key, value|
-#   end, where the code to execute for each hash entry is between do and end
-#   b. you can use .each {|key,value| <code to execute here>} for shorter segments of code
-#   c. if you only need the keys, you can use .each_key instead of .each
-#   d. if you only need the values, you can use .each_value instead of .each
-# When refactoring virus_effects, what stood out to you about the variables, if anything?
-# The variables were instance variables, so there was no need to pass them into the method.
-# What concept did you most solidify in this challenge?
-# Having a hash within a hash was a bit tricky for me to wrap my brain around. My guide and my pair were both very helpful 
-# explaining the structure and various ways to access the hash elements.
+# 
+# One uses strings as the key and the "=>" operator and the other uses symbols
+# and ":"
 
+# What does require_relative do? How is it different from require? 
+#
+# It adds the contents of the required file the first time it is required. 
+# The difference is that the file path is relative to the location of the 
+# file that is using the require.
+
+# What are some ways to iterate through a hash?
+# 
+# .each, .each_key, .each_value
+# pull out the keys as a separate array and iterate through them
+
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+#
+# That we did not have to pass the variables because they were already
+# accessible to the class methods.
+
+# What concept did you most solidify in this challenge?
+#
+# That in ruby, the default scope is only the current context and not
+# also nested contexts like it is in C.
 
 

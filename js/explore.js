@@ -16,4 +16,7 @@ function reverse(originalString) {
 }
 
 console.log("something")
-console.log(reverse("something"))
+newString = reverse("something")
+if (newString.length > 0) {
+	console.log(newString);
+};

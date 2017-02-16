@@ -8,6 +8,10 @@
 function reverse(originalString) {
 	var reversedString = "";
 
+	for (i = originalString.length-1; i >= 0; i--) {
+		reversedString += originalString[i]
+	};
+
 	return reversedString;
 }
 

@@ -48,15 +48,15 @@ function sharedPair(firstObject,secondObject) {
 	return false;
 };
 
-var funyun = {species: 'cat', color: 'grey', motivation: 'being a jerk'};
-var trixie = {species: 'pidgeon', color: 'grey', home: 'Boston'}
-var suitcase = {type: 'roller', color: 'red', contents: 'clothes'}
-var david = {job: 'valet', motivation: 'self expression', home: 'Boston'}
+// var funyun = {species: 'cat', color: 'grey', motivation: 'being a jerk'};
+// var trixie = {species: 'pidgeon', color: 'grey', home: 'Boston'}
+// var suitcase = {type: 'roller', color: 'red', contents: 'clothes'}
+// var david = {job: 'valet', motivation: 'self expression', home: 'Boston'}
 
-console.log(sharedPair(funyun,trixie));
-console.log(sharedPair(funyun,suitcase));
-console.log(sharedPair(suitcase,david));
-console.log(sharedPair(trixie,david));
+// console.log(sharedPair(funyun,trixie));
+// console.log(sharedPair(funyun,suitcase));
+// console.log(sharedPair(suitcase,david));
+// console.log(sharedPair(trixie,david));
 
 
 
@@ -86,17 +86,18 @@ function randomWords(numWords) {
 	return wordList;
 };
 
-console.log(randomWords(14));
+// console.log(randomWords(14));
 
-longList = randomWords(888);
-minWordLength = longList[0].length;
-maxWordLength = minWordLength;
-for (var i = 0; i < longList.length; i++) {
-	if (longList[i].length < minWordLength) {
-		minWordLength = longList[i].length;
-	} else if (longList[i].length > maxWordLength) {
-		maxWordLength = longList[i].length;
-	};
-};
-console.log('smallest word is ' + minWordLength + ' letters');
-console.log('largest word is ' + maxWordLength + ' letters');
+// longList = randomWords(888);
+// minWordLength = longList[0].length;
+// maxWordLength = minWordLength;
+// for (var i = 0; i < longList.length; i++) {
+// 	if (longList[i].length < minWordLength) {
+// 		minWordLength = longList[i].length;
+// 	} else if (longList[i].length > maxWordLength) {
+// 		maxWordLength = longList[i].length;
+// 	};
+// };
+// console.log('smallest word is ' + minWordLength + ' letters');
+// console.log('largest word is ' + maxWordLength + ' letters');
+

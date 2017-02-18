@@ -7,7 +7,7 @@
 // output: the longest phrase
 
 function longestPhrase(phraseList) {
-	var longestSoFar = ""
+	var longestSoFar = ''
 
 	for (var i = 0; i < phraseList.length; i++) {
 		if (longestSoFar.length < phraseList[i].length) {
@@ -16,7 +16,6 @@ function longestPhrase(phraseList) {
 	};
 
 	return longestSoFar;
-	
 };
 
 var activities = ['skiing','basking in the sun','snoozing in a hammock'];
@@ -27,16 +26,29 @@ console.log(longestPhrase(codeKeys));
 
 
 
-function sharedPair
-input: two objects
-steps:
-	loop through all the keys in object1
-		for each key check if it is a key in object 2
-			if it is then check if the associated values are the same too
-				if so return true
-	return false if you get done looping
-output: true or false
+// function sharedPair
+// input: two objects
+// steps:
+// 	loop through all the keys in object1
+// 		for each key check if it is a key in object 2
+// 			if it is then check if the associated values are the same too
+// 				if so return true
+// 	return false if you get done looping
+// output: true or false
 
+function sharedPair(firstObject,secondObject) {
 
+	return false;
+};
+
+var funyun = {species: 'cat', color: 'grey', motivation: 'being a jerk'};
+var trixie = {species: 'pidgeon', color: 'grey', home: 'Boston'}
+var suitcase = {type: 'roller', color: 'red', contents: 'clothes'}
+var david = {job: 'valet', motivation: 'self expression', home: 'Boston'}
+
+console.log(sharedPair(funyun,trixie));
+console.log(sharedPair(funyun,suitcase));
+console.log(sharedPair(suitcase,david));
+console.log(sharedPair(trixie,david));
 
 

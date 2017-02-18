@@ -61,12 +61,29 @@ console.log(sharedPair(trixie,david));
 
 
 // function randomWords
-// input: length integer
+// input: integer number of words
 // steps:
 // 	make an empty array
-// 	for loop length times
+// 	for loop number of words times
 // 		generate a random word length
 // 		for loop over that word length
 // 			add a random letter to the word
 // 		add the word to the array
-// output: a array of length random words
+// output: a array of random words
+
+function randomWords(numWords) {
+	wordList = []
+	alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+	for (var i = 0; i < numWords; i++) {
+		wordLength = Math.floor(Math.random() * 10) + 1;
+		newWord = '';
+		for (var j = 0; j < wordLength; j++) {
+			newWord += alphabet[Math.floor(Math.random() * 26)]
+		};
+		wordList.push(newWord);
+	};
+	return wordList;
+};
+
+console.log(randomWords(4))

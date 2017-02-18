@@ -18,11 +18,13 @@ function longestPhrase(phraseList) {
 	return longestSoFar;
 };
 
-var activities = ['skiing','basking in the sun','snoozing in a hammock'];
-console.log(longestPhrase(activities));
-
-var codeKeys = ['34DK5L3','9O9ON','00203 FF','2 4 R','66766E-3'];
-console.log(longestPhrase(codeKeys));
+// DRIVER CODE TO TEST longestPhrase
+//
+// var activities = ['skiing','basking in the sun','snoozing in a hammock'];
+// console.log(longestPhrase(activities));
+//
+// var codeKeys = ['34DK5L3','9O9ON','00203 FF','2 4 R','66766E-3'];
+// console.log(longestPhrase(codeKeys));
 
 
 
@@ -48,11 +50,13 @@ function sharedPair(firstObject,secondObject) {
 	return false;
 };
 
+// DRIVER CODE TO TEST sharedPair
+//
 // var funyun = {species: 'cat', color: 'grey', motivation: 'being a jerk'};
 // var trixie = {species: 'pidgeon', color: 'grey', home: 'Boston'}
 // var suitcase = {type: 'roller', color: 'red', contents: 'clothes'}
 // var david = {job: 'valet', motivation: 'self expression', home: 'Boston'}
-
+//
 // console.log(sharedPair(funyun,trixie));
 // console.log(sharedPair(funyun,suitcase));
 // console.log(sharedPair(suitcase,david));
@@ -86,8 +90,10 @@ function randomWords(numWords) {
 	return wordList;
 };
 
+// DRIVER CODE TO TEST randomWords
+//
 // console.log(randomWords(14));
-
+//
 // longList = randomWords(888);
 // minWordLength = longList[0].length;
 // maxWordLength = minWordLength;
@@ -101,3 +107,10 @@ function randomWords(numWords) {
 // console.log('smallest word is ' + minWordLength + ' letters');
 // console.log('largest word is ' + maxWordLength + ' letters');
 
+
+for (var i = 0; i < 10; i++) {
+	list = randomWords(6);
+	console.log(list);
+	console.log(longestPhrase(list));
+	console.log('');
+};

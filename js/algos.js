@@ -86,4 +86,17 @@ function randomWords(numWords) {
 	return wordList;
 };
 
-console.log(randomWords(4))
+console.log(randomWords(14));
+
+longList = randomWords(888);
+minWordLength = longList[0].length;
+maxWordLength = minWordLength;
+for (var i = 0; i < longList.length; i++) {
+	if (longList[i].length < minWordLength) {
+		minWordLength = longList[i].length;
+	} else if (longList[i].length > maxWordLength) {
+		maxWordLength = longList[i].length;
+	};
+};
+console.log('smallest word is ' + minWordLength + ' letters');
+console.log('largest word is ' + maxWordLength + ' letters');

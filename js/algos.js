@@ -59,3 +59,14 @@ console.log(sharedPair(suitcase,david));
 console.log(sharedPair(trixie,david));
 
 
+
+// function randomWords
+// input: length integer
+// steps:
+// 	make an empty array
+// 	for loop length times
+// 		generate a random word length
+// 		for loop over that word length
+// 			add a random letter to the word
+// 		add the word to the array
+// output: a array of length random words

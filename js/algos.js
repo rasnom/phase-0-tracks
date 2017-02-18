@@ -25,3 +25,18 @@ console.log(longestPhrase(activities));
 var codeKeys = ['34DK5L3','9O9ON','00203 FF','2 4 R','66766E-3'];
 console.log(longestPhrase(codeKeys));
 
+
+
+function sharedPair
+input: two objects
+steps:
+	loop through all the keys in object1
+		for each key check if it is a key in object 2
+			if it is then check if the associated values are the same too
+				if so return true
+	return false if you get done looping
+output: true or false
+
+
+
+

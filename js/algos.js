@@ -37,6 +37,13 @@ console.log(longestPhrase(codeKeys));
 // output: true or false
 
 function sharedPair(firstObject,secondObject) {
+	for (key in firstObject) {
+		if (key in secondObject) {
+			if (firstObject[key] == secondObject[key]) {
+				return true;
+			};
+		};
+	};
 
 	return false;
 };

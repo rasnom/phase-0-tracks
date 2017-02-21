@@ -1,0 +1,13 @@
+CREATE TABLE drinks_menu (
+	id INTEGER PRIMARY KEY,
+	name varchar(255),
+
+);
+
+
+
+CREAT TABLE ingredients (
+	id INTEGER PRIMARY KEY,
+	name varchar(255),
+
+);

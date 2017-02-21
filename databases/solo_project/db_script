@@ -1,13 +1,21 @@
-CREATE TABLE drinks_menu (
-	id INTEGER PRIMARY KEY,
-	name varchar(255),
-
+CREATE TABLE cocktails (
+	id INT PRIMARY KEY,
+	name VARCHAR(255),
+	description VARCHAR(255)
 );
 
-
-
-CREAT TABLE ingredients (
-	id INTEGER PRIMARY KEY,
-	name varchar(255),
-
+CREATE TABLE ingredients (
+	id INT PRIMARY KEY,
+	name VARCHAR(255),
+	price_per_ml DECIMAL
 );
+
+CREATE TABLE recipe_lines (
+	id INT PRIMARY KEY,
+	step_order INT,
+	cocktail_id INT,
+	FOREIGN KEY (cocktail_id) REFERENCES (cocktails.id),
+	ingredient_id INT,
+	FOREIGN KEY (ingredient_id) REFERENCES (ingredients.id),
+	volume_in_ml INT
+)

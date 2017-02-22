@@ -1,0 +1,37 @@
+sqlite> .schema cocktails
+CREATE TABLE cocktails (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name VARCHAR(255),
+        description VARCHAR(255),
+        price DECIMAL
+
+
+sqlite> UPDATE cocktails SET price=12.50 WHERE name="Nemesis";
+sqlite> SELECT * FROM cocktails WHERE name="Nemesis";
+1|Nemesis|Not to be trifled with|12.5
+
+
+sqlite> select cocktails.name, ingredients.name from cocktails
+   ...> left join recipe_lines on recipe_lines.cocktail_id = cocktails.id
+   ...> left join ingredients on recipe_lines.ingredient_id = ingredients.id;
+Nemesis|Midori
+Nemesis|Agwa
+Nemesis|Vodka
+Nemesis|House Sour Liquor
+Mystery Cult|Gin
+Mystery Cult|Dark Rum
+Mystery Cult|Golden Rum
+Mystery Cult|Grenadine
+Mystery Cult|Pineapple Juice
+Mystery Cult|Passion Fruit Pulp
+Blind Satyr|
+Randy Zeus|Agwa
+Randy Zeus|Current Syrup
+Randy Zeus|Tequila
+Randy Zeus|Lemon Juice
+Gladiator's Cup|Gin
+Gladiator's Cup|Lemon Juice
+Marathon|Vodka
+Marathon|Golden Rum
+
+

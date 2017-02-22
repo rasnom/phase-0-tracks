@@ -1,24 +1,65 @@
 CREATE TABLE cocktails (
-	id INT PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	name VARCHAR(255),
-	description VARCHAR(255)
+	description VARCHAR(255),
+	price DECIMAL
 );
 
 CREATE TABLE ingredients (
-	id INT PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	name VARCHAR(255),
-	price_per_ml DECIMAL
+	price_per_l DECIMAL
 );
 
 CREATE TABLE recipe_lines (
-	id INT PRIMARY KEY,
-	step_order INT,
-	cocktail_id INT,
-	ingredient_id INT,
-	volume_in_ml INT,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	step_order INTEGER,
+	cocktail_id INTEGER,
+	ingredient_id INTEGER,
+	volume_in_ml INTEGER,
 	FOREIGN KEY(cocktail_id) REFERENCES cocktails(id),
 	FOREIGN KEY(ingredient_id) REFERENCES ingredients(id)
 );
 
+INSERT INTO cocktails (name, description, price) VALUES
+	("Nemesis", "Not to be trifled with", 12.00),
+	("Mystery Cult", "To share with a select few", 30.00),
+	("Blind Satyr", "We warned you", 14.00),
+	("Randy Zeus", "Avoid", 14.00),
+	("Gladiator's Cup", "Salty", 12.00 ),
+	("Marathon", "In for the long haul", 32.00);
 
+INSERT INTO ingredients (name, price_per_l) VALUES
+	("Midori", 32.0),
+	("Agwa", 40.0),
+	("Gin", 14.6),
+	("Vodka", 9.56),
+	("House Sour Liquor", 67.89),
+	("Dark Rum", 14.99),
+	("Golden Rum", 17.88),
+	("Grenadine", 5.90),
+	("Pineapple Juice", 1.67),
+	("Passion Fruit Pulp", 13.45),
+	("Current Syrup", 7.66),
+	("Tequila", 19.88),
+	("Lemon Juice", 4.80);
 
+INSERT INTO recipe_lines (cocktail_id, ingredient_id, step_order, volume_in_ml) VALUES
+		(1, 1, 1, 30),
+		(1, 2, 2, 15),
+		(1, 4, 3, 30),
+		(1, 5, 4, 15),
+		(2, 3, 1, 60),
+		(2, 6, 1, 45),
+		(2, 7, 1, 100),
+		(2, 8, 2, 45),
+		(2, 9, 2, 500),
+		(2, 10, 2, 100),
+		(4, 12, 1, 60),
+		(4, 2, 2, 15),
+		(4, 11, 2, 15),
+		(4, 13, 3, 40),
+		(5, 3, 1, 45),
+		(5, 13, 1, 10),
+		(6, 4, 1, 60),
+		(6, 7, 1, 60);

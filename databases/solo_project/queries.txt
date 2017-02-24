@@ -35,3 +35,16 @@ Marathon|Vodka
 Marathon|Golden Rum
 
 
+sqlite> SELECT cocktails.name, cocktails.price, 
+	 ...> SUM(recipe_lines.volume_in_ml * ingredients.price_per_l / 1000) 
+	 ...> FROM cocktails
+   ...> LEFT JOIN recipe_lines ON recipe_lines.cocktail_id = cocktails.id
+   ...> LEFT JOIN ingredients ON recipe_lines.ingredient_id = ingredients.id 
+   ...> GROUP BY cocktails.name, cocktails.price;
+Blind Satyr|14|
+Gladiator's Cup|12|0.705
+Marathon|32|1.6464
+Mystery Cult|30|5.78405
+Nemesis|12.5|1.30515
+Randy Zeus|14|1.4997
+ 

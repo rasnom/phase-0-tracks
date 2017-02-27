@@ -1,7 +1,5 @@
 require_relative 'snack_space'
 
-require 'json'
-
 describe SnackInfo do
 	let (:snack_info) {SnackInfo.new}
 
@@ -20,4 +18,8 @@ describe SnackInfo do
 		expect(report['name']).to include "FUNYUN"
 	end
 
+	it "saves portions of food reports to a db" do
+		snack_info.lookup_food_report("45154886")
+		snack_info.lookup_food_report("")
+		expect(snack_info.
 end

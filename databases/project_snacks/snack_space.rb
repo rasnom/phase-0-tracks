@@ -5,6 +5,7 @@ require 'httparty' # which likely will need to be installed
 HTTParty::Basement.default_options.update(verify: false)
 
 require 'json'
+require 'sqlite3'
 
 class SnackInfo 
 	attr_reader :ndbno

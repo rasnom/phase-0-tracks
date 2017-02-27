@@ -5,7 +5,7 @@ require 'json'
 describe SnackInfo do
 	let (:snack_info) {SnackInfo.new}
 
-	it "can pull data from the gov by upc" do
+	it "can search for product from the gov db by upc" do
 		search_result = snack_info.upc_search("028400072731")
 		expect(search_result).to include "FUNYUN"
 	end
@@ -15,6 +15,9 @@ describe SnackInfo do
 		expect(snack_info.ndbno).to eq "45154886"
 	end
 
-
+	it "can pull down a food composition report by ndbno" do
+		report = snack_info.lookup_food_report("45154886")
+		expect(report['name']).to include "FUNYUN"
+	end
 
 end

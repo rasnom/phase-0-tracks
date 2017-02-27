@@ -6,7 +6,6 @@ HTTParty::Basement.default_options.update(verify: false)
 
 require 'json'
 
-
 class SnackInfo 
 	attr_reader :ndbno
 
@@ -21,6 +20,13 @@ class SnackInfo
 		search_result = JSON.parse(response.body)['list']['item'][0]
 		@ndbno = search_result['ndbno']
 		return search_result['name']
+	end
+
+	def lookup_food_report(ndbno)
+		response = HTTParty.get("https://api.nal.usda.gov/ndb/reports/" +
+			"?ndbno=#{ndbno}&type=b&format=json" +
+			"&api_key=#{@api_key}")
+		report = JSON.parse(response.body)['report']['food']
 	end
 
 end

@@ -1,0 +1,72 @@
+nav {
+	position: fixed;
+	width: 100%;
+	background: yellow;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li{
+	float: left;
+	padding-right: 15px;
+	padding-bottom: 5px;
+}
+
+.active {
+	background: beige;
+}
+
+.drink li, .food li{
+	margin-top: 15px;
+}
+
+li.featured {
+	background-image: url("media/greek_border.svg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	padding: 10px;
+	list-style: none;
+	max-width: 15em;
+}
+
+.featured table {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-top: 20px;
+	padding-bottom:  30px;
+}
+
+.featured table li {
+	margin-top: 30px;
+}
+
+main {
+	-webkit-column-width: 300px;
+	-moz-column-width: 300px;
+	column-width: 300px;
+
+	-webkit-column-rule: solid 1px #3d4423;
+	-moz-column-rule: solid 1px #3d4423;
+	column-rule: solid 1px #3d4423;
+
+	background: #daef8d; position: relative; top: 50px; margin-left: auto;
+	margin-right: auto;
+
+	font-family: Verdana, Geneva, sans-serif ;
+}
+
+header {
+	position: fixed;
+}
+
+#mystery_cult {
+	font-family: "Palatino Linotype", Palatino, serif;
+	color: #870c85;
+}
+
+a:visited {
+	color: crimson;
+}

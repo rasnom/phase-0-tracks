@@ -12,3 +12,8 @@ Then research any specifics for the particular project that are non-obvious and 
 Build a proof of concept.
 
 Not really try to refine the proof of concept, but if there is extra time just spending it playing. 
+
+## Coda
+I think that both looking at a full complex project and through tutorials were both useful, and am not actually sure if the relative order is important.
+
+It was important to recognize when I was getting tired and bored and it was time to stop or try a different approach.

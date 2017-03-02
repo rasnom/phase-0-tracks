@@ -1,5 +1,7 @@
 # require gems
 require 'sinatra'
+#require 'sinatra/reloader'
+
 require 'sqlite3'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
@@ -11,6 +13,11 @@ db.results_as_hash = true
 get '/' do
   @students = db.execute("SELECT * FROM students")
   erb :home
+end
+
+get '/campus' do
+  @students = db.execute("SELECT * FROM students")
+  erb :campus
 end
 
 get '/students/new' do

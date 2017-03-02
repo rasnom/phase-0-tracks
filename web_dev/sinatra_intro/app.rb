@@ -64,3 +64,13 @@ get '/sum/:num_1/:num_2' do
 	sum = params[:num_1].to_i + params[:num_2].to_i
 	sum.to_s
 end
+
+get '/campus/:location' do
+	response = "Students at #{params[:location]} campus:<br><br>"
+
+	students = db.execute("SELECT * FROM students WHERE campus=?", [params[:location]])
+	students.each do |student|
+		response << "#{student['name']}<br>"
+	end
+	response
+end

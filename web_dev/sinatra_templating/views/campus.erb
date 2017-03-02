@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Campus</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Students By Campus</h1>
+
+	<!- pull out all the unique campuses from our students
+ 
+  make a dropdown menu with those campuses
+ 
+  filter our students so we only display the ones from that campus
+
+->
+	<% 	
+		campuses = []
+			@students.each do |student|
+				campuses << student['campus']
+			campuses.uniq!
+		end
+	%>
+
+  <form action="campus" method="get">
+    <div>
+      <label>Campuses</label>
+      <select name="location">
+      	<option value="ALL">All</option>
+        <% campuses.each do |location| %>
+        	<option value="<%= location %>"><%= location %></option>
+        <% end %> 
+      </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <% 
+  	if params.has_key?('location') && params['location'] != "ALL"
+  		local_students = @students.select {|student| student['campus']==params['location']} 
+  	else
+  		local_students = @students 
+  	end
+  %>
+
+	<ul>
+		<% local_students.each do |student| %>
+			<li><%= student['name'] %>, <%= student['age']%>, <%=student['campus'] %></li>
+		<% end %>
+	</ul>
+
+</body>
+</html>
